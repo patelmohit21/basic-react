@@ -1,7 +1,13 @@
 import React from 'react'
 import './App.css';
+import Theme from './Components/Theme';
+import { ThemeProvider } from './ThemeContext';
+import ThemeComp from './Components/ThemeComp'
+// import Searchbar from './Components/Searchbar';
+// import Hamburger from './Components/Hamburger';
+// import Weather from './Components/Weather';
 // import Uploader from './Components/Uploader';
-import Thirteen from './Components/Thirteen';
+// import Thirteen from './Components/Thirteen';
 // import Ten from './Ten';
 
 // import Five from './five'
@@ -19,6 +25,8 @@ import Thirteen from './Components/Thirteen';
 
 
 export default function App() {
+
+  // const items = ['Item 1', 'Item 2', 'Item 3', 'Another item']
   return (
     <div className='app'>
       {/* <One /> */}
@@ -33,8 +41,16 @@ export default function App() {
       {/* <Ten/> */}
       {/* <Eleven /> */}
       {/* <Uploader /> */}
-      <Thirteen />
-
+      {/* <Thirteen /> */}
+      {/* <Weather /> */}
+      {/* <Searchbar items={items}/> */}
+      {/* <Hamburger /> */}
+      <ThemeProvider>
+      <div className='App'>
+      <Theme />
+      <ThemeComp />
+      </div>
+      </ThemeProvider>
     </div>
   )
 }
